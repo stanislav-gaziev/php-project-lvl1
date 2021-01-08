@@ -3,11 +3,14 @@
     "description": "project php-project-lvl1",
     "license": "MIT",
     "bin": [
-      "bin/brain-games"
+      "bin/brain-games",
+      "bin/brain-even"
     ],
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/greeting.php",
+            "src/brain-even.php"
         ]
     },
     "scripts": {
