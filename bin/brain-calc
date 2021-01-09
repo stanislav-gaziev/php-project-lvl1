@@ -13,4 +13,4 @@ if (file_exists($autoloadPath1)) {
 use function Php\Project\Lvl1\greeting\showGreeting;
 use function Php\Project\Lvl1\Engine\toPlayGames;
 
-toPlayGames(showGreeting(), 'brain-even');
+toPlayGames(showGreeting(), 'brain-calc');
