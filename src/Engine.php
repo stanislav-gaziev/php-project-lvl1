@@ -5,6 +5,7 @@ namespace Php\Project\Lvl1\Engine;
 use Php\Project\Lvl1\Games\brain\even;
 use Php\Project\Lvl1\Games\brain\calc;
 use Php\Project\Lvl1\Games\brain\gcd;
+use Php\Project\Lvl1\Games\brain\progression;
 
 use function cli\line;
 use function cli\prompt;
