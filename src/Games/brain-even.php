@@ -2,7 +2,7 @@
 
 namespace Php\Project\Lvl1\Games\brain\even;
 
-function getDataGameBrainEven()
+function getDataGameBrainEven(): array
 {
     $gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
     $data = [$gameDescription];

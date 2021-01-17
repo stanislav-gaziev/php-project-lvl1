@@ -2,7 +2,7 @@
 
 namespace Php\Project\Lvl1\Games\brain\calc;
 
-function getDataGameBrainCalc()
+function getDataGameBrainCalc(): array
 {
     $gameDescription = 'What is the result of the expression?';
     $data = [$gameDescription];
@@ -19,14 +19,16 @@ function getDataGameBrainCalc()
         $operator = $operators[rand(0, $lenArr - 1)];
         $num1 = rand($minNumber, $maxNumber);
         $num2 = rand($minNumber, $maxNumber);
+        $questionValue = '';
+        $expectedResult = '';
 
-        if ($operator === '+') {
+        if ($operator == '+') {
             $questionValue = "{$num1} + {$num2}";
             $expectedResult = $num1 + $num2;
-        } elseif ($operator === '-') {
+        } elseif ($operator == '-') {
             $questionValue = "{$num1} - {$num2}";
             $expectedResult = $num1 - $num2;
-        } elseif ($operator === '*') {
+        } elseif ($operator == '*') {
             $questionValue = "{$num1} * {$num2}";
             $expectedResult = $num1 * $num2;
         }

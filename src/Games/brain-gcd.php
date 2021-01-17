@@ -2,7 +2,7 @@
 
 namespace Php\Project\Lvl1\Games\brain\gcd;
 
-function getDataGameBrainGcd()
+function getDataGameBrainGcd(): array
 {
     $gameDescription = 'Find the greatest common divisor of given numbers.';
     $data = [$gameDescription];

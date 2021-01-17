@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Php\Project\Lvl1\Engine\toPlayGame;
 
-function getPlayerName()
+function getPlayerName(): string
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -14,7 +14,7 @@ function getPlayerName()
     return $name;
 }
 
-function chooseGame($gameName)
+function chooseGame(string $gameName): void
 {
     $playerName = getPlayerName();
 

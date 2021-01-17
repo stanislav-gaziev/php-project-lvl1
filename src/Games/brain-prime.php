@@ -2,7 +2,7 @@
 
 namespace Php\Project\Lvl1\Games\brain\prime;
 
-function getDataGameBrainPrime()
+function getDataGameBrainPrime(): array
 {
     $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $data = [$gameDescription];

@@ -2,7 +2,7 @@
 
 namespace Php\Project\Lvl1\Games\brain\progression;
 
-function getDataGameBrainProgression()
+function getDataGameBrainProgression(): array
 {
     $gameDescription = 'What number is missing in the progression?';
     $data = [$gameDescription];
@@ -28,7 +28,7 @@ function getDataGameBrainProgression()
         while ($currentPosition < $progressionLength) {
             if ($currentPosition === 0) {
                 $currentNumber = rand($minNumber, $maxNumber);
-            } elseif ($currentPosition !== 0 && $numbers[$currentPosition - 1] === "..") {
+            } elseif ($numbers[$currentPosition - 1] === "..") {
                 $currentNumber = $expectedResult + $progressionStep;
             } else {
                 $currentNumber = $numbers[$currentPosition - 1] + $progressionStep;

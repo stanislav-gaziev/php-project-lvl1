@@ -5,12 +5,15 @@ namespace Php\Project\Lvl1\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function toPlayGame($playerName, $gameName)
+function toPlayGame(string $playerName, string $gameName): void
 {
     [$part1, $part2] = explode('-', $gameName);
     $gameNameForFunc = ucfirst($part1) . ucfirst($part2);
     $func = "Php\Project\Lvl1\Games" . "\\" . "{$part1}" . "\\" . "{$part2}" . "\\" . "getDataGame{$gameNameForFunc}";
-    $data = $func();
+
+    if (is_callable($func)) {
+        $data = $func();
+    }
 
     [$gameDescription] = $data;
     line('%s', $gameDescription);
