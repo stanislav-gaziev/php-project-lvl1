@@ -13,6 +13,8 @@ function toPlayGame(string $playerName, string $gameName): void
 
     if (is_callable($func)) {
         $data = $func();
+    } else {
+        return;
     }
 
     [$gameDescription] = $data;
