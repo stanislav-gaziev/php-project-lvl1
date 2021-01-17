@@ -14,31 +14,9 @@ function getPlayerName()
     return $name;
 }
 
-function chooseGame($gameName = '')
+function chooseGame($gameName)
 {
     $playerName = getPlayerName();
 
-    if ($gameName === '') {
-        line('Games:');
-
-        $dir = __DIR__ . '/Games';
-        $files = array_diff(scandir($dir), array('..', '.'));
-        $games = [];
-
-        foreach ($files as $file) {
-            [$fileName] = explode('.', $file);
-            $games[] = $fileName;
-            line('%s', $fileName);
-        }
-
-        $gameName = prompt('Write name a game (example: brain-name)');
-    } else {
-        $games = [$gameName];
-    }
-
-    if (in_array($gameName, $games, true)) {
-        toPlayGame($playerName, $gameName);
-    } else {
-        line('Incorrect name a game!');
-    }
+    toPlayGame($playerName, $gameName);
 }
