@@ -2,16 +2,10 @@
 
 namespace Php\Project\Lvl1\Engine;
 
-use Php\Project\Lvl1\Games\brain\even;
-use Php\Project\Lvl1\Games\brain\calc;
-use Php\Project\Lvl1\Games\brain\gcd;
-use Php\Project\Lvl1\Games\brain\progression;
-use Php\Project\Lvl1\Games\brain\prime;
-
 use function cli\line;
 use function cli\prompt;
 
-function toPlayGames($playerName, $gameName)
+function toPlayGame($playerName, $gameName)
 {
     [$part1, $part2] = explode('-', $gameName);
     $gameNameForFunc = ucfirst($part1) . ucfirst($part2);

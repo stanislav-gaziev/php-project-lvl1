@@ -13,7 +13,6 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/greeting.php",
             "src/Engine.php",
             "src/Games/brain-even.php",
             "src/Games/brain-calc.php",
